@@ -8,7 +8,7 @@ O **NetGuard** é um script experimental em Python desenvolvido para fins de est
 
 O script monitora o tráfego da rede local buscando pacotes ARP de resposta (`ARP Reply`). 
 
-1. **Mapeamento Inicial:** Ao iniciar, ele tenta descobrir o MAC do roteador enviando uma requisição legítima.
+1. **Mapeamento Inicial:** Ao iniciar, ele descobre o MAC atualmente associado ao gateway enviando uma requisição ARP legítima.
 2. **Monitoramento:** Ele fica ouvindo a rede. Se aparecer um pacote ARP dizendo que o IP do roteador pertence a outro MAC, ele assume que é um ataque.
 3. **Tentativa de Mitigação:** O script envia uma pequena rajada de 5 pacotes legítimos em broadcast para tentar reverter o envenenamento na máquina local.
 
